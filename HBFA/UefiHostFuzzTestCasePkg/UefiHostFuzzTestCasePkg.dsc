@@ -14,7 +14,7 @@
   SUPPORTED_ARCHITECTURES        = IA32|X64
   BUILD_TARGETS                  = DEBUG|RELEASE|NOOPT
   SKUID_IDENTIFIER               = DEFAULT
-  MBEDTLS_FUZZ                   = edk2-staging/HBFA/UefiHostFuzzTestCasePkg/TestCase/CryptoPkg
+  MBEDTLS_FUZZ                   = UefiHostFuzzTestCasePkg/CryptoPkg
 
   DEFINE TEST_WITH_INSTRUMENT = FALSE
 
