@@ -59,7 +59,7 @@ def GenerateNewToolsDef(Src, Dst):
     FlagVer = "GCC48_ALL_CC_FLAGS"
 
     for line in lines:
-        pattern = re.compile("GCC\d{1,2}_ALL_CC_FLAGS")
+        pattern = re.compile("GCC\\d{1,2}_ALL_CC_FLAGS")
         obj = pattern.findall(line)
         if len(obj) != 0:
             FlagVer = obj[0]
