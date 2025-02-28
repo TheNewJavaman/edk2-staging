@@ -27,6 +27,9 @@
   GCC:*_LIBFUZZER_X64_CC_FLAGS == -m64 -g -fshort-wchar -fno-strict-aliasing -Wall -idirafter/usr/include -c -include $(DEST_DIR_DEBUG)/AutoGen.h
   GCC:*_LIBFUZZER_X64_CC_FLAGS = "-DNO_MSABI_VA_FUNCS=TRUE"
 
+  GCC:*_LIBFUZZER_AARCH64_CC_FLAGS == -target aarch64-pc-linux-gnu -march=armv8-a -g -fshort-wchar -fno-strict-aliasing -Wall -idirafter/usr/include -c -include $(DEST_DIR_DEBUG)/AutoGen.h
+  GCC:*_LIBFUZZER_AARCH64_CC_FLAGS = "-DNO_MSABI_VA_FUNCS=TRUE"
+
   GCC:*_LIBFUZZER_*_CC_FLAGS = "-DTEST_WITH_LIBFUZZER=TRUE" -O1 -fsanitize=fuzzer,address
   GCC:*_LIBFUZZER_*_DLINK2_FLAGS = -fsanitize=fuzzer,address
 
